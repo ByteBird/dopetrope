@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+h1, h2, h3, h4, h5, ul, li, div, span, a, img, header, main, footer, article, section, p{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;;
+}
+
+/* Basics Styles */
+
+input, label{ display: none;}
+
+
+/* NAR BAR */
+.nav-bar{
+    width: 275px;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: #241e22;
+}
+
+.nav-bar ul{
+    list-style: none;
+}
+
+.nav-bar ul a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+    line-height: 3.2;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Litas */
+
+.list-one>li>a{
+ margin-left: 20px;
+}
+.list-two>li>a{
+ margin-left: 30px;
+ color: rgba(255, 255, 255, 0.5);
+}
+
+.list-three>li>a{
+    color: rgba(255, 255, 255, 0.5);
+ margin-left: 50px;
+}
+
+/* Items de listas */
+
+.list-one li{
+    border-bottom: 1px solid rgba(82, 82, 82, 0.2);
+    height: 50px;
+}
+
+.list-one>li:nth-of-type(2){
+    border-bottom: none;
+    height: auto;
+}
+
+.list-two>li:nth-of-type(4){
+    border-bottom: none;
+    height: auto;
+}
+
+
+.list-two>li:nth-of-type(1){
+    border-top: 1px solid rgba(82, 82, 82, 0.2);
+    border-bottom: 1px solid rgba(82, 82, 82, 0.2);
+}
+
+.list-two>li:nth-of-type(1)>a{
+    margin-left: 15px;
+}
+
+.list-three>li:nth-of-type(1){
+    border-top: 1px solid rgba(82, 82, 82, 0.2);
+    border-bottom: 1px solid rgba(82, 82, 82, 0.2);
+}
+
+.list-three>li:nth-of-type(1)>a{
+    margin-left: 25px;   
+}
+
+.list-one>li:nth-of-type(5){
+    border: 0;
+}
+
