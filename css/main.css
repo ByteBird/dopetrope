@@ -1,29 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
 /* font-family: 'Roboto', sans-serif; */
 
-h1, h2, h3, h4, h5, ul, li, div, span, a, img, header, main, footer, article, section, p{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 html, body{
+    overflow-x: hidden;
     width: 100%;
     font-family: 'Roboto', sans-serif;;
 }
 
 /* Basics Styles */
 
-input, label{ display: none;}
+input{ display: none;}
 
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header */
+
+/* Input button */
+
+label{ 
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgba(95, 95, 95, 0.671);
+    color: #eee;
+    font-size: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.4s;
+    transition-property: left;
+
+}
+
+/*  input functionality */
+
+#button-nav-bar:checked ~ label{
+    left: 285px;
+}
+
+#button-nav-bar:checked ~ .conteiner{
+    left: 275px;
+}
+
+#button-nav-bar:checked ~ .conteiner .nav-bar{
+    left: 0;
+}
+.conteiner{
+    position: absolute;
+    left: 0;
+    transition-duration: 0.4s;
+    transition-property: left;
+}
 
 /* NAR BAR */
 .nav-bar{
     width: 275px;
+    left: -275px;
     position: fixed;
     top: 0;
     height: 100vh;
-    background: #241e22;
+    background: #221f20;
+    transition-duration: 0.4s;
+    transition-property: left;
+    overflow-y: auto
 }
 
 .nav-bar ul{
@@ -94,3 +147,143 @@ input, label{ display: none;}
     border: 0;
 }
 
+
+
+.header-conteiner{
+    width: 100%;
+}
+.header h1{
+    font-size: 2.25em;
+    margin: 0;
+    height: 135px;
+    width: 100%;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central{
+    height: 323px;
+    background: url('../img/urban.jpg');
+    
+}
+
+.slogan{
+    position: relative;
+    top: 91px;
+    margin: auto;
+    width: 600px;
+    height: 140px;
+    background: #1f1c1dfb;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.slogan h2{
+    font-size: 2.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #eee;
+}
+
+.slogan h3{
+    margin-top: 20px;
+    color: rgb(211, 21, 21);
+    font-weight: 300;
+}
+
+/*  main content */
+
+/* Front page */
+
+.front-page{
+    width: 100%;
+    border-bottom: 1px solid rgb(216, 216, 216);;
+}
+
+.features{
+    width: 93%;
+    margin: auto;
+}
+
+.features-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.features-item i{
+    color: #fff;
+    padding: 35px;
+    border-radius: 5px 5px 0 0;
+    font-size: 4em;
+    margin: 40px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.features-item p{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+.features-item span{
+    font-size: 0.9em;
+    font-weight: 200;
+    margin-bottom: 35px;
+}
+
+.features-item .icon-cog{
+    background: rgb(213, 35, 73);
+}
+
+.features-item .icon-fire{
+    background: rgb(37, 33, 34);
+}
+.features-item .icon-lab{
+    background: rgb(131, 122, 124);
+}
+
+.features article:last-child{
+    border: none;
+}
+
+.main-links{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.main-links a{
+    width: 280px;
+    font-size: 1.3em;
+    font-weight: 700;
+    
+    margin: 0 10px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.main-links a:first-child{
+    background: rgb(213, 35, 73);
+}
+
+.main-links a:last-child{
+ background: rgb(37, 33, 34);
+}
